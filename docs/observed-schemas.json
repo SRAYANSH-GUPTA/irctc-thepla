@@ -1,0 +1,1153 @@
+{
+  "observedDate": "2026-10-13",
+  "scope": "Field names and sampled types only; not a complete API contract. All original primitive values omitted. Array schema uses its first element. Form values are strings on the wire; parseable JSON literals are described by parsed type. :value is path redaction, not a URL component.",
+  "observations": [
+    {
+      "method": "POST",
+      "host": "www.irctc.co.in",
+      "path": "/eticketing/protected/:value/altAvlEnq/TC",
+      "observation": "success-shape",
+      "httpStatus": 200,
+      "authorizationScheme": "Bearer",
+      "requestHeaderNames": [
+        "Accept",
+        "Accept-Language",
+        "Authorization",
+        "Content-Language",
+        "Content-Type",
+        "Referer",
+        "User-Agent",
+        "bmirak",
+        "bmiyek",
+        "greq",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform",
+        "spa-csrf-token"
+      ],
+      "responseHeaderNames": [
+        "access-control-allow-credentials",
+        "access-control-allow-origin",
+        "access-control-expose-headers",
+        "akamai-grn",
+        "alt-svc",
+        "cache-control",
+        "content-encoding",
+        "content-length",
+        "content-security-policy",
+        "content-type",
+        "csrf-token",
+        "date",
+        "expires",
+        "pragma",
+        "quic-version",
+        "server-timing",
+        "strict-transport-security",
+        "vary",
+        "x-frame-options",
+        "x-oracle-dms-ecid",
+        "x-oracle-dms-rid"
+      ],
+      "requestBody": {
+        "format": "json",
+        "shape": {
+          "concessionBooking": "boolean",
+          "srcStn": "string",
+          "destStn": "string",
+          "jrnyClass": "string",
+          "jrnyDate": "string",
+          "quotaCode": "string",
+          "currentBooking": "string",
+          "flexiFlag": "boolean",
+          "handicapFlag": "boolean",
+          "ticketType": "string",
+          "loyaltyRedemptionBooking": "boolean",
+          "ftBooking": "boolean"
+        }
+      },
+      "responseBody": {
+        "format": "json",
+        "shape": {
+          "trainBtwnStnsList": {
+            "type": "array",
+            "sample": {
+              "trainNumber": "string",
+              "trainName": "string",
+              "fromStnCode": "string",
+              "toStnCode": "string",
+              "arrivalTime": "string",
+              "departureTime": "string",
+              "distance": "string",
+              "duration": "string",
+              "runningMon": "string",
+              "runningTue": "string",
+              "runningWed": "string",
+              "runningThu": "string",
+              "runningFri": "string",
+              "runningSat": "string",
+              "runningSun": "string",
+              "avlClasses": {
+                "type": "array",
+                "sample": "string"
+              },
+              "trainType": {
+                "type": "array",
+                "sample": "string"
+              },
+              "atasOpted": "string",
+              "flexiFlag": "string",
+              "trainOwner": "string",
+              "trainsiteId": "string"
+            }
+          },
+          "alternateTrainBtwnStnsList": {
+            "type": "array",
+            "sample": {
+              "trainNumber": "string",
+              "trainName": "string",
+              "fromStnCode": "string",
+              "toStnCode": "string",
+              "arrivalTime": "string",
+              "departureTime": "string",
+              "distance": "string",
+              "duration": "string",
+              "runningMon": "string",
+              "runningTue": "string",
+              "runningWed": "string",
+              "runningThu": "string",
+              "runningFri": "string",
+              "runningSat": "string",
+              "runningSun": "string",
+              "avlClasses": {
+                "type": "array",
+                "sample": "string"
+              },
+              "trainType": {
+                "type": "array",
+                "sample": "string"
+              },
+              "journeyDate": "string",
+              "atasOpted": "string",
+              "flexiFlag": "string",
+              "trainOwner": "string",
+              "trainsiteId": "string"
+            }
+          },
+          "quotaList": {
+            "type": "array",
+            "sample": "string"
+          },
+          "serverId": "string",
+          "timeStamp": "string",
+          "vikalpInSpecialTrainsAccomFlag": "string",
+          "serveyFlag": "string",
+          "alternateEnquiryFlag": "string"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "host": "www.irctc.co.in",
+      "path": "/eticketing/protected/:value/allLapAvlEnq",
+      "observation": "success-shape",
+      "httpStatus": 200,
+      "authorizationScheme": "Bearer",
+      "requestHeaderNames": [
+        "Accept",
+        "Accept-Language",
+        "Authorization",
+        "Content-Language",
+        "Content-Type",
+        "Referer",
+        "User-Agent",
+        "bmirak",
+        "bmiyek",
+        "greq",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform"
+      ],
+      "responseHeaderNames": [
+        "access-control-allow-credentials",
+        "access-control-allow-origin",
+        "akamai-grn",
+        "alt-svc",
+        "cache-control",
+        "content-encoding",
+        "content-length",
+        "content-security-policy",
+        "content-type",
+        "date",
+        "expires",
+        "pragma",
+        "quic-version",
+        "server-timing",
+        "strict-transport-security",
+        "vary",
+        "x-frame-options",
+        "x-oracle-dms-ecid",
+        "x-oracle-dms-rid"
+      ],
+      "requestBody": {
+        "format": "json",
+        "shape": {
+          "clusterFlag": "string",
+          "onwardFlag": "string",
+          "cod": "string",
+          "reservationMode": "string",
+          "autoUpgradationSelected": "boolean",
+          "gnToCkOpted": "boolean",
+          "paymentType": "number",
+          "twoPhaseAuthRequired": "boolean",
+          "captureAddress": "number",
+          "alternateAvlInputDTO": {
+            "type": "array",
+            "sample": {
+              "trainNo": "string",
+              "destStn": "string",
+              "srcStn": "string",
+              "jrnyDate": "string",
+              "quotaCode": "string",
+              "ftBooking": "boolean",
+              "avlClasses": {
+                "type": "array",
+                "sample": "string"
+              },
+              "concessionPassengers": "boolean"
+            }
+          },
+          "ticketType": "string"
+        }
+      },
+      "responseBody": {
+        "format": "json",
+        "shape": {
+          "trainBtwnStnsList": {
+            "type": "array",
+            "sample": {
+              "trainNumber": "string",
+              "fromStnCode": "string",
+              "toStnCode": "string",
+              "distance": "string",
+              "avlClasses": {
+                "type": "array",
+                "sample": "string"
+              },
+              "journeyDate": "string",
+              "atasOpted": "string",
+              "flexiFlag": "string",
+              "quotaCode": "string",
+              "classAvlDTO": {
+                "type": "array",
+                "sample": {
+                  "distance": "string",
+                  "enqClass": "string",
+                  "trainOwner": "string",
+                  "baseFare": "string",
+                  "reservationCharge": "string",
+                  "superfastCharge": "string",
+                  "fuelAmount": "string",
+                  "totalConcession": "string",
+                  "tatkalFare": "string",
+                  "serviceTax": "string",
+                  "otherCharge": "string",
+                  "cateringCharge": "string",
+                  "dynamicFare": "string",
+                  "totalFare": "string",
+                  "otpAuthenticationFlag": "string",
+                  "cateringFlag": "string",
+                  "avlDayList": {
+                    "type": "array",
+                    "sample": {
+                      "availablityDate": "string",
+                      "availablityStatus": "string",
+                      "reasonType": "string",
+                      "availablityType": "string",
+                      "currentBkgFlag": "string",
+                      "wlType": "string",
+                      "delayFlag": "string",
+                      "delay": "string"
+                    }
+                  },
+                  "informationMessage": {
+                    "type": "array",
+                    "sample": {
+                      "message": "string",
+                      "popup": "string",
+                      "paramName": "string"
+                    }
+                  },
+                  "avlFound": "string"
+                }
+              }
+            }
+          },
+          "serverId": "string",
+          "timeStamp": "string",
+          "vikalpInSpecialTrainsAccomFlag": "string",
+          "alternateEnquiryFlag": "string"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "host": "www.irctc.co.in",
+      "path": "/eticketing/protected/:value/allLapAvlEnq",
+      "observation": "error",
+      "httpStatus": 401,
+      "authorizationScheme": "Bearer",
+      "requestHeaderNames": [
+        "Accept",
+        "Accept-Language",
+        "Authorization",
+        "Content-Language",
+        "Content-Type",
+        "Referer",
+        "User-Agent",
+        "bmirak",
+        "bmiyek",
+        "greq",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform"
+      ],
+      "responseHeaderNames": [
+        "access-control-allow-credentials",
+        "access-control-allow-origin",
+        "akamai-grn",
+        "alt-svc",
+        "cache-control",
+        "content-encoding",
+        "content-length",
+        "content-type",
+        "date",
+        "expires",
+        "pragma",
+        "quic-version",
+        "server-timing",
+        "strict-transport-security",
+        "vary",
+        "www-authenticate",
+        "x-oracle-dms-ecid",
+        "x-oracle-dms-rid"
+      ],
+      "requestBody": {
+        "format": "json",
+        "shape": {
+          "clusterFlag": "string",
+          "onwardFlag": "string",
+          "cod": "string",
+          "reservationMode": "string",
+          "autoUpgradationSelected": "boolean",
+          "gnToCkOpted": "boolean",
+          "paymentType": "number",
+          "twoPhaseAuthRequired": "boolean",
+          "captureAddress": "number",
+          "alternateAvlInputDTO": {
+            "type": "array",
+            "sample": {
+              "trainNo": "string",
+              "destStn": "string",
+              "srcStn": "string",
+              "jrnyDate": "string",
+              "quotaCode": "string",
+              "ftBooking": "boolean",
+              "avlClasses": {
+                "type": "array",
+                "sample": "string"
+              },
+              "concessionPassengers": "boolean"
+            }
+          },
+          "ticketType": "string"
+        }
+      },
+      "responseBody": {
+        "format": "json",
+        "shape": {
+          "error": "string",
+          "error_description": "string"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "host": "www.irctc.co.in",
+      "path": "/authprovider/webtoken",
+      "observation": "error",
+      "httpStatus": 200,
+      "authorizationScheme": "absent",
+      "requestHeaderNames": [
+        "Accept",
+        "Accept-Language",
+        "Content-Type",
+        "Referer",
+        "User-Agent",
+        "bmirak",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform"
+      ],
+      "responseHeaderNames": [
+        "access-control-allow-origin",
+        "akamai-grn",
+        "alt-svc",
+        "cache-control",
+        "content-length",
+        "content-security-policy",
+        "content-type",
+        "date",
+        "expires",
+        "pragma",
+        "quic-version",
+        "referrer-policy",
+        "server-timing",
+        "strict-transport-security",
+        "vary",
+        "x-content-type-options",
+        "x-frame-options",
+        "x-xss-protection"
+      ],
+      "requestBody": {
+        "format": "form",
+        "shape": {
+          "grant_type": "string",
+          "data": "string",
+          "captcha": "string",
+          "uid": "string",
+          "otpLogin": {
+            "format": "json",
+            "shape": "boolean"
+          },
+          "encodedPwd": {
+            "format": "json",
+            "shape": "boolean"
+          }
+        }
+      },
+      "responseBody": {
+        "format": "json",
+        "shape": {
+          "error": "string",
+          "error_description": "string"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "host": "www.irctc.co.in",
+      "path": "/authprovider/webtoken",
+      "observation": "success-shape",
+      "httpStatus": 200,
+      "authorizationScheme": "absent",
+      "requestHeaderNames": [
+        "Accept",
+        "Accept-Language",
+        "Content-Type",
+        "Referer",
+        "User-Agent",
+        "bmirak",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform"
+      ],
+      "responseHeaderNames": [
+        "access-control-allow-origin",
+        "akamai-grn",
+        "alt-svc",
+        "cache-control",
+        "content-length",
+        "content-security-policy",
+        "content-type",
+        "date",
+        "expires",
+        "pragma",
+        "quic-version",
+        "referrer-policy",
+        "server-timing",
+        "strict-transport-security",
+        "vary",
+        "x-content-type-options",
+        "x-frame-options",
+        "x-xss-protection"
+      ],
+      "requestBody": {
+        "format": "form",
+        "shape": {
+          "grant_type": "string",
+          "data": "string",
+          "captcha": "string",
+          "uid": "string",
+          "otpLogin": {
+            "format": "json",
+            "shape": "boolean"
+          },
+          "encodedPwd": {
+            "format": "json",
+            "shape": "boolean"
+          }
+        }
+      },
+      "responseBody": {
+        "format": "json",
+        "shape": {
+          "access_token": "string",
+          "refresh_token": "string",
+          "token_type": "string",
+          "expires_in": "number"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "host": "www.irctc.co.in",
+      "path": "/eticketing/protected/:value/validateUser",
+      "observation": "success-shape",
+      "httpStatus": 200,
+      "authorizationScheme": "Bearer",
+      "requestHeaderNames": [
+        "Accept",
+        "Accept-Language",
+        "Authorization",
+        "Content-Language",
+        "Content-Type",
+        "Referer",
+        "User-Agent",
+        "bmirak",
+        "bmiyek",
+        "greq",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform",
+        "spa-csrf-token"
+      ],
+      "responseHeaderNames": [
+        "access-control-allow-origin",
+        "access-control-expose-headers",
+        "akamai-grn",
+        "alt-svc",
+        "cache-control",
+        "content-encoding",
+        "content-length",
+        "content-security-policy",
+        "content-type",
+        "csrf-token",
+        "date",
+        "expires",
+        "pragma",
+        "quic-version",
+        "server-timing",
+        "strict-transport-security",
+        "vary",
+        "x-frame-options",
+        "x-oracle-dms-ecid",
+        "x-oracle-dms-rid"
+      ],
+      "requestBody": null,
+      "responseBody": {
+        "format": "json",
+        "shape": {
+          "existenceFlag": "string",
+          "mpOldStatus": "string",
+          "spouseOldStatus": "string",
+          "mpCardExpFlag": "string",
+          "funcType": "string",
+          "mpSpouseFlag": "string",
+          "spouseExistenceFlag": "string",
+          "mpFileExistFlag": "string",
+          "updatePhoto": "string",
+          "cardStatus": "string",
+          "mobile_flag": "string",
+          "email_flag": "string",
+          "emailVerifyFlag": "string",
+          "userName": "string",
+          "userId": "string",
+          "firstName": "string",
+          "gender": "string",
+          "dob": "string",
+          "email": "string",
+          "countryId": "string",
+          "mobile": "string",
+          "isdCode": "string",
+          "verified": "string",
+          "emailVerified": "string",
+          "mobileVerified": "string",
+          "userEnableState": "string",
+          "mobileAppConfigDTO": {
+            "formFillCheckStartTime": "string",
+            "formFillCheckEndTime": "string",
+            "captchaFillCheckStartTime": "string",
+            "captchaFillCheckEndTime": "string",
+            "minmPsgnInputTime": "string",
+            "minmCaptchaInputTime": "string",
+            "minmPaymentTime": "string",
+            "formFillCheckEnable": "string",
+            "paymentCompletCheckEnable": "string",
+            "gstEnable": "string",
+            "faceAuthKycEnable": "string"
+          },
+          "informationMessage": {
+            "type": "array",
+            "sample": {
+              "message": "string",
+              "popup": "string",
+              "paramName": "string"
+            }
+          },
+          "lastTxnId": "string",
+          "lastTxnStatus": "string",
+          "lastTxnTimeStamp": "string",
+          "rdsFlag": "string",
+          "aadhaarVerifyFlag": "string",
+          "eWalletExpireFlag": "string",
+          "eWalletAadhaarRegisterFlag": "string",
+          "renewFlag": "string",
+          "otpLogin": "string",
+          "rolles": {
+            "type": "array",
+            "sample": "string"
+          },
+          "userPaymentFlag": "string",
+          "serverId": "string",
+          "timeStamp": "string",
+          "kycAddressDisplayStat": "string",
+          "deactivationReason": "string",
+          "enable": "string",
+          "userIdHash": "string",
+          "aadhaarReverifyFlag": "string",
+          "passwordChangeMandatory": "string",
+          "masterList": "string",
+          "fevJourney": "string",
+          "softBankList": {
+            "type": "array",
+            "sample": {
+              "bankId": "string",
+              "bankName": "string",
+              "paymentMode": "string",
+              "enableFlag": "string",
+              "displaySection": "string",
+              "cardInputFlag": "string",
+              "travelAgentFlag": "string",
+              "txnPasswordMandatory": "string",
+              "groupId": "string",
+              "displaySequence": "string",
+              "juspayEnableFlag": "string"
+            }
+          },
+          "kycStatus": "string",
+          "kycDate": "string",
+          "dobChangeFlag": "string",
+          "genderChangeFlag": "string",
+          "nameChangeFlag": "string",
+          "nameUpdateFlag": "string",
+          "groupId": "string",
+          "appModeSuperApp": "string",
+          "forceUserReverify": "string",
+          "remainingPasswordChangeDays": "string",
+          "kycDocToken": "string",
+          "ewalletValidDocListToken": "string",
+          "kycValidDocListToken": "string",
+          "kycMode": "string",
+          "ersTktSendEmailFlag": "string",
+          "ersTktDownloadFlag": "string",
+          "ratingOptions": {
+            "type": "array",
+            "sample": {
+              "v": "string",
+              "en": "string",
+              "hi": "string"
+            }
+          }
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "host": "www.irctc.co.in",
+      "path": "/eticketing/protected/:value/boardingStationEnq",
+      "observation": "success-shape",
+      "httpStatus": 200,
+      "authorizationScheme": "Bearer",
+      "requestHeaderNames": [
+        "Accept",
+        "Accept-Language",
+        "Authorization",
+        "Content-Language",
+        "Content-Type",
+        "Referer",
+        "User-Agent",
+        "bmirak",
+        "bmiyek",
+        "greq",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform",
+        "spa-csrf-token"
+      ],
+      "responseHeaderNames": [
+        "access-control-allow-credentials",
+        "access-control-allow-origin",
+        "access-control-expose-headers",
+        "akamai-grn",
+        "alt-svc",
+        "cache-control",
+        "content-encoding",
+        "content-length",
+        "content-security-policy",
+        "content-type",
+        "csrf-token",
+        "date",
+        "expires",
+        "pragma",
+        "quic-version",
+        "server-timing",
+        "strict-transport-security",
+        "vary",
+        "x-frame-options",
+        "x-oracle-dms-ecid",
+        "x-oracle-dms-rid"
+      ],
+      "requestBody": {
+        "format": "json",
+        "shape": {
+          "clusterFlag": "string",
+          "onwardFlag": "string",
+          "cod": "string",
+          "reservationMode": "string",
+          "autoUpgradationSelected": "boolean",
+          "gnToCkOpted": "boolean",
+          "paymentType": "number",
+          "twoPhaseAuthRequired": "boolean",
+          "captureAddress": "number",
+          "alternateAvlInputDTO": {
+            "type": "array",
+            "sample": {
+              "trainNo": "string",
+              "destStn": "string",
+              "srcStn": "string",
+              "jrnyDate": "string",
+              "quotaCode": "string",
+              "jrnyClass": "string",
+              "concessionPassengers": "boolean"
+            }
+          },
+          "passBooking": "boolean",
+          "journalistBooking": "boolean",
+          "returnJourney": "boolean"
+        }
+      },
+      "responseBody": {
+        "format": "json",
+        "shape": {
+          "trainAlternatenno": "string",
+          "boardingStationList": {
+            "type": "array",
+            "sample": {
+              "stnNameCode": "string",
+              "arrivalTime": "string",
+              "departureTime": "string",
+              "routeNumber": "string",
+              "haltTime": "string",
+              "distance": "string",
+              "dayCount": "string",
+              "stnSerialNumber": "string",
+              "boardingDate": "string"
+            }
+          },
+          "serverId": "string",
+          "timeStamp": "string",
+          "mealChoiceenable": "string",
+          "bkgCfgs": {
+            "type": "array",
+            "sample": {
+              "seniorCitizenApplicable": "string",
+              "foodChoiceEnabled": "string",
+              "idRequired": "string",
+              "bedRollFlagEnabled": "string",
+              "maxMasterListPsgn": "string",
+              "maxPassengers": "string",
+              "maxInfants": "string",
+              "minNameLength": "string",
+              "maxNameLength": "string",
+              "srctznAge": "string",
+              "srctnwAge": "string",
+              "maxARPDays": "string",
+              "maxRetentionDays": "string",
+              "minPassengerAge": "string",
+              "maxPassengerAge": "string",
+              "maxChildAge": "string",
+              "minIdCardLength": "string",
+              "maxIdCardLength": "string",
+              "minPassportLength": "string",
+              "maxPassportLength": "string",
+              "srctzTAge": "string",
+              "lowerBerthApplicable": "string",
+              "newTimeTable": "string",
+              "childBerthMandatory": "string",
+              "validIdCardTypes": {
+                "type": "array",
+                "sample": "string"
+              },
+              "applicableBerthTypes": {
+                "type": "array",
+                "sample": "string"
+              },
+              "suvidhaTrain": "string",
+              "specialTatkal": "string",
+              "atasEnable": "string",
+              "gatimaanTrain": "string",
+              "travelInsuranceEnabled": "string",
+              "travelInsuranceFareMsg": "string",
+              "uidVerificationPsgnInputFlag": "string",
+              "uidVerificationMasterListFlag": "string",
+              "uidMandatoryFlag": "string",
+              "gstDetailInputFlag": "string",
+              "gstinPattern": "string",
+              "forgoConcession": "string",
+              "twoSSReleaseFlag": "string",
+              "beyondArpBooking": "string",
+              "acuralBooking": "string",
+              "redemptionBooking": "string",
+              "trainsiteId": "string",
+              "bonafideCountryList": {
+                "type": "array",
+                "sample": "string"
+              },
+              "pmfInputEnable": "string",
+              "pmfInputMandatory": "string",
+              "pmfInputMaxLength": "string",
+              "paymentOption": {
+                "header": "string",
+                "type": "string",
+                "defaultValue": "string",
+                "options": {
+                  "type": "array",
+                  "sample": {
+                    "value": "string",
+                    "label": "string",
+                    "desc": "string"
+                  }
+                }
+              },
+              "captureAddress": "string",
+              "trainNo": "string"
+            }
+          },
+          "minPsgnInputTime": "string"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "host": "www.irctc.co.in",
+      "path": "/eticketing/protected/:value/masterpsgnlistenquiry",
+      "observation": "success-shape",
+      "httpStatus": 200,
+      "authorizationScheme": "Bearer",
+      "requestHeaderNames": [
+        "Accept",
+        "Accept-Language",
+        "Authorization",
+        "Content-Language",
+        "Content-Type",
+        "Referer",
+        "User-Agent",
+        "bmirak",
+        "bmiyek",
+        "greq",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform"
+      ],
+      "responseHeaderNames": [
+        "access-control-allow-origin",
+        "akamai-grn",
+        "alt-svc",
+        "cache-control",
+        "content-encoding",
+        "content-length",
+        "content-security-policy",
+        "content-type",
+        "date",
+        "expires",
+        "pragma",
+        "quic-version",
+        "server-timing",
+        "strict-transport-security",
+        "vary",
+        "x-frame-options",
+        "x-oracle-dms-ecid",
+        "x-oracle-dms-rid"
+      ],
+      "requestBody": null,
+      "responseBody": {
+        "format": "json",
+        "shape": {
+          "passengerDetailList": {
+            "type": "array",
+            "sample": {
+              "slno": "string",
+              "masterPassengerName": "string",
+              "berthPreference": "string",
+              "foodPreference": "string",
+              "srCtznConc": "string",
+              "masterListId": "string",
+              "idCardType": "string",
+              "idCardNumber": "string",
+              "gender": "string",
+              "dateOfBirth": "string",
+              "age": "string",
+              "name": "string",
+              "verificationStatus": "string",
+              "verificationStatusString": "string",
+              "verificationCode": "string",
+              "concessionCode": "string"
+            }
+          },
+          "maxAllowedPsgn": "string",
+          "serverId": "string",
+          "timeStamp": "string"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "host": "www.irctc.co.in",
+      "path": "/eticketing/protected/:value/allLapAvlFareEnq/Y",
+      "observation": "success-shape",
+      "httpStatus": 200,
+      "authorizationScheme": "Bearer",
+      "requestHeaderNames": [
+        "Accept",
+        "Accept-Language",
+        "Authorization",
+        "Content-Language",
+        "Content-Type",
+        "Referer",
+        "User-Agent",
+        "bmirak",
+        "bmiyek",
+        "greq",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform",
+        "spa-csrf-token"
+      ],
+      "responseHeaderNames": [
+        "access-control-allow-credentials",
+        "access-control-allow-origin",
+        "access-control-expose-headers",
+        "akamai-grn",
+        "alt-svc",
+        "cache-control",
+        "content-encoding",
+        "content-length",
+        "content-security-policy",
+        "content-type",
+        "csrf-token",
+        "date",
+        "expires",
+        "pragma",
+        "quic-version",
+        "server-timing",
+        "strict-transport-security",
+        "vary",
+        "x-frame-options",
+        "x-oracle-dms-ecid",
+        "x-oracle-dms-rid"
+      ],
+      "requestBody": {
+        "format": "json",
+        "shape": {
+          "clusterFlag": "string",
+          "onwardFlag": "string",
+          "cod": "string",
+          "reservationMode": "string",
+          "autoUpgradationSelected": "boolean",
+          "gnToCkOpted": "boolean",
+          "paymentType": "string",
+          "twoPhaseAuthRequired": "boolean",
+          "captureAddress": "number",
+          "wsUserLogin": "string",
+          "moreThanOneDay": "boolean",
+          "clientTransactionId": "string",
+          "boardingStation": "string",
+          "reservationUptoStation": "string",
+          "mobileNumber": "string",
+          "ticketType": "string",
+          "mainJourneyTxnId": "null",
+          "mainJourneyPnr": "string",
+          "captcha": "string",
+          "generalistChildConfirm": "boolean",
+          "ftBooking": "boolean",
+          "loyaltyRedemptionBooking": "boolean",
+          "loyaltyBankId": "null",
+          "loyaltyNumber": "null",
+          "nosbBooking": "boolean",
+          "warrentType": "number",
+          "ftTnCAgree": "boolean",
+          "bookingChoice": "number",
+          "bookingConfirmChoice": "number",
+          "bookOnlyIfCnf": "boolean",
+          "returnJourney": "boolean",
+          "connectingJourney": "boolean",
+          "noFood": "boolean",
+          "lapAvlRequestDTO": {
+            "type": "array",
+            "sample": {
+              "trainNo": "string",
+              "journeyDate": "string",
+              "fromStation": "string",
+              "toStation": "string",
+              "journeyClass": "string",
+              "quota": "string",
+              "coachId": "null",
+              "reservationChoice": "string",
+              "ignoreChoiceIfWl": "boolean",
+              "travelInsuranceOpted": "boolean",
+              "warrentType": "number",
+              "coachPreferred": "boolean",
+              "autoUpgradation": "boolean",
+              "bookOnlyIfCnf": "boolean",
+              "addMealInput": "null",
+              "concessionBooking": "boolean",
+              "passengerList": {
+                "type": "array",
+                "sample": {
+                  "passengerName": "string",
+                  "passengerAge": "number",
+                  "passengerGender": "string",
+                  "passengerBerthChoice": "string",
+                  "passengerFoodChoice": "null",
+                  "passengerFoodChoiceBackUp": "string",
+                  "passengerSrCtznConcession": "string",
+                  "childBerthFlag": "boolean",
+                  "passengerBedrollChoice": "null",
+                  "passengerNationality": "string",
+                  "passengerCardType": "string",
+                  "passengerCardNumber": "string",
+                  "passengerCardTypeMaster": "string",
+                  "passengerCardNumberMaster": "string",
+                  "psgnConcType": "null",
+                  "psgnConcCardId": "null",
+                  "psgnConcDOB": "null",
+                  "psgnConcCardExpiryDate": "null",
+                  "psgnConcDOBP": "string",
+                  "softMemberId": "null",
+                  "softMemberFlag": "null",
+                  "psgnConcCardExpiryDateP": "null",
+                  "passengerVerified": "boolean",
+                  "masterPsgnId": "string",
+                  "mpMemberFlag": "null",
+                  "passengerForceNumber": "null",
+                  "passConcessionType": "string",
+                  "passUPN": "null",
+                  "passBookingCode": "null",
+                  "passengerSerialNumber": "number"
+                }
+              },
+              "infantList": {
+                "type": "array",
+                "sample": null
+              },
+              "ssQuotaSplitCoach": "string"
+            }
+          },
+          "gstDetails": {
+            "gstIn": "null",
+            "error": "null"
+          },
+          "bankId": "null",
+          "tktAddress": "null"
+        }
+      },
+      "responseBody": {
+        "format": "json",
+        "shape": {
+          "avlFareResponseDTO": {
+            "type": "array",
+            "sample": {
+              "trainName": "string",
+              "distance": "string",
+              "reqEnqParam": "string",
+              "quota": "string",
+              "enqClass": "string",
+              "from": "string",
+              "to": "string",
+              "trainNo": "string",
+              "trainOwner": "string",
+              "baseFare": "string",
+              "reservationCharge": "string",
+              "superfastCharge": "string",
+              "fuelAmount": "string",
+              "totalConcession": "string",
+              "tatkalFare": "string",
+              "serviceTax": "string",
+              "otherCharge": "string",
+              "cateringCharge": "string",
+              "dynamicFare": "string",
+              "totalFare": "string",
+              "wpServiceCharge": "string",
+              "wpServiceTax": "string",
+              "travelInsuranceCharge": "string",
+              "travelInsuranceServiceTax": "string",
+              "insuredPsgnCount": "string",
+              "serverId": "string",
+              "timeStamp": "string",
+              "otpAuthenticationFlag": "string",
+              "totalCollectibleAmount": "string",
+              "avlDayList": {
+                "type": "array",
+                "sample": {
+                  "availablityDate": "string",
+                  "availablityStatus": "string",
+                  "reasonType": "string",
+                  "availablityType": "string",
+                  "currentBkgFlag": "string",
+                  "wlType": "string",
+                  "delayFlag": "string",
+                  "delay": "string"
+                }
+              },
+              "informationMessage": {
+                "type": "array",
+                "sample": {
+                  "message": "string",
+                  "popup": "string",
+                  "paramName": "string"
+                }
+              },
+              "reTry": "string",
+              "taRdsFlag": "string",
+              "upiRdsFlag": "string",
+              "rdsTxnPwdFlag": "string",
+              "ftBookingMsgFlag": "string",
+              "trainsiteId": "string",
+              "qrCodeIpayEnableFlag": "string"
+            }
+          },
+          "totalCollectibleAmount": "string",
+          "totalwpServiceCharge": "string",
+          "bankDetailDTO": {
+            "type": "array",
+            "sample": {
+              "bankId": "string",
+              "bankName": "string",
+              "paymentMode": "string",
+              "message": "string",
+              "enableFlag": "string",
+              "displaySection": "string",
+              "cardInputFlag": "string",
+              "travelAgentFlag": "string",
+              "txnPasswordMandatory": "string",
+              "groupId": "string",
+              "displaySequence": "string",
+              "juspayEnableFlag": "string"
+            }
+          },
+          "zeroFareBooking": "string"
+        }
+      }
+    }
+  ]
+}
